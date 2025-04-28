@@ -45,7 +45,7 @@ for(let i=0;i<option.length;i++){
         if(localStorage.getItem("orientation") == "portrait"){
             image.style.cssText += "rotate:0deg;"
         }else{
-            image.style.cssText += "rotate:90deg;width:75%;height:100%;object-fit:contain; border:1px solid red"
+            image.style.cssText += "rotate:90deg;width:150%;height:150%;border:2px solid orange;"
         }
         if(localStorage.getItem("side") == "single"){
             console.log("single side");
