@@ -62,6 +62,8 @@ function sendMail(to,sub,msg){
 <p><strong>Hariom Modi</strong></p>
 <p>Contact us: THEPAYPARSTORY@gmail.com</p>
 `
+    }).catch(function(e){
+        console.log("error aya ")
     })
 }
 
@@ -178,7 +180,7 @@ app.post("/signup",async function(req,res){
     console.log(token)
     res.cookie("token",token)
     // console.log(user);
-    res.redirect("/home")
+    res.redirect("/")
 })
 app.get("/printout",async function(req,res){
     if(req.cookies.token){
