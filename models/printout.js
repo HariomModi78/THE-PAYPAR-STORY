@@ -5,7 +5,10 @@ const printoutSchema = mongoose.Schema({
     token:String,
     status:String,
     document:String,
-    page:Number,
+    page:{
+        type:Number,
+        default:1
+    },
     height:Number,
     width:Number
 })
