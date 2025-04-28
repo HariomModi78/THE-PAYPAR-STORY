@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE PAYPR STORY</title>
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <i class="ri-arrow-left-line back"></i>
+            THE PAYPAR STORY
+            <div class="div"></div>
+        </div>
+        <div class="wellcome">Wellcome to our app</div>
+        <div class="createText">Create a free account</div>
+        <form action="/signup" class="signupForm" method="post">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username">
+            <label for="mobileNumber">Mobile  Number</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber">
+            <div class="two">
+                <div class="part1">
+                    <label for="college" class="zero">College</label>
+                    <select name="college" id="college">
+                        <option value="">---select---</option>
+                        <option value="Medicaps univercity">Medicaps univercity</option>
+                        <option value="Vaishnav University">Vaishnav University</option>
+                        <option value="Sage Univercity">Sage Univercity</option>
+                    </select>
+                </div>
+                <div class="part2">
+                    <label for="block" class="zero1">Block</label>
+                    <input type="text" id="block" name="block">
+                </div>
+                
+            </div>
+            
+            <div class="two">
+                <div class="part1">
+                    <label for="department" class="zero">Department</label>
+                    <input type="text" id="department" name="department">
+                </div>
+                <div class="part2">
+                    <label for="roomNumber" class="zero1">Room No.</label>
+                    <input type="text" id="roomNumber" name="roomNumber">
+                </div>
+            </div>
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" name="profilePicture" id="profilePicture">
+            <div class="refer">Referal Code <p>(Optional)</p><i class="ri-arrow-right-s-line"></i></div>
+            <input type="text" placeholder="Refer Code🫂" class="referInput">
+            <div class="condition">
+                By continuing, you confirm that you are above 18 years of age , and you agree to <b>THE PAYPAR STORY</b>  <div class="term">Terms</div> of use and <div class="term">Privary Policy</div>
+            </div>
+            <input type="submit" value="Login" class="login">
+
+        </form>
+        
+        <div class="fakeFooter"></div>
+    </main>
+    <script src="javaScripts/signup.js"></script>
+</body>
+</html>
