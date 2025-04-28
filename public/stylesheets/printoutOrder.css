@@ -58,11 +58,13 @@ main{
 }
 
 .fileImage img{
+    height: 100%;
+    width: 100%;
     object-fit: contain;
    
     /* border: 1px solid black; */
     /* object-fit: contain; */
-     /* filter: grayscale(100%);  */
+     filter: grayscale(100%); 
 }
 .fileCount{
     height: 15%;
