@@ -1,0 +1,36 @@
+{
+    "name": "The paypar story",
+    "short_name": "the paypar story",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": [
+      {
+        "src": "/images/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+  {
+    "src": "/images/screen.png",
+    "sizes": "1363x603",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "/images/screen.png",
+    "sizes": "1363x603",
+    "type": "image/png",
+    "form_factor": "narrow"
+  }
+]
+  }
+  

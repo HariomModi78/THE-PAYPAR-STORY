@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE PAYPR STORY</title>
+    <link rel="stylesheet" href="/stylesheets/printoutOrder.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#317EFB">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <i class="ri-arrow-left-line"></i>
+            <i class="ri-image-add-line"></i>
+        </div>
+        <div class="file">  
+            <div class="fileImage">
+                <%
+
+               let photo=  (print.document).replace(".pdf",".jpeg");
+               if((print.document).includes(".gif")){
+                photo =  (print.document).replace(".gif",".jpeg");
+               }
+               let height,width;
+               if(print.width  <  print.height){
+                height = 265;
+                width = 200;
+               }else if(print.width > print.height){
+                if(print.width/print.height > 1.5){
+                    var rotate = 1;
+                }
+
+                height = 200;
+                width = 265;
+                var contain = "object-fit:content";
+               }else{
+                var contain = "object-fit:content";
+               }
+                
+                %>
+                <%if(contain){%>
+                    <img src="<%=photo%>" alt="" height="200px" width="200px">
+                <%}else if(rotate){%>
+                    <img src="<%=photo%>" alt="" height="<%=height%>px" width="<%=width%>px" style="rotate: 90deg;">
+               <%}else{%>
+                <img src="<%=photo%>" alt="" height="<%=height%>px" width="<%=width%>px">
+               <%}%>
+            </div>
+            <div class="fileCount">
+                <%if(print.page){%>
+                    1File 
+                    (<%=print.page %>)Page
+                <%}else{%>
+                   (1 Page)</div>
+                <%}%>
+        </div>
+        <div class="copy">
+            <div class="copyNumber">1 copy</div>
+            <div class="copyOption">
+                <div class="dec">-</div>
+                <div class="number">1</div>
+                <div class="inc">+</div>
+            </div>
+        </div>
+        <div class="printOption">
+            <div class="optionHeading">Printout Color</div>
+            <div class="two">
+                <div class="option">
+                    <div class="optionName">
+                        <div class="name">B&W</div>
+                        <div class="price">₹3/page</div>
+                    </div>
+                    <div class="optionIcon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2071/2071778.png" alt="">
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="optionName">
+                        <div class="name">Colorfull</div>
+                        <div class="price">₹10/page</div>
+                    </div>
+                    <div class="optionIcon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2071/2071514.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="optionHeading">Printout Orientation</div>
+            <div class="two">
+                <div class="option">
+                    <div class="optionName">
+                        <div class="name">Portrait</div>
+                        <div class="price">8.3x11.7in</div>
+                    </div>
+                    <div class="optionIcon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/12363/12363539.png" alt="">
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="optionName">
+                        <div class="name">Landscape</div>
+                        <div class="price">11.7x8.3in</div>
+                    </div>
+                    <div class="optionIcon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/12363/12363541.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="optionHeading">Printout Style</div>
+            <div class="two">
+                <div class="option">
+                    <div class="optionName">
+                        <div class="name">Single Side</div>
+                        <div class="price">₹2/page</div>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="optionName">
+                        <div class="name">Double Side</div>
+                        <div class="price">₹3/page</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fakeFooter"></div>
+        <div class="fakeFooter"></div>
+
+        <div class="footer">
+        <div class="amount">₹<%=print.page*2%></div>
+        <div class="pay" id="<%=print._id%>">Order Now</div>
+        </div>
+    </main>
+    <script src="/javaScripts/printoutOrder.js"></script>
+</body>
+</html>
