@@ -9,10 +9,11 @@ const http = require("http");
 const socket  = require("socket.io");
 const server = http.createServer(app);
 const io = socket(server);
+require("dotenv").config();
+
 
 const userDataBase = require("./models/user.js");
 const printoutDataBase = require("./models/printout.js");
-
 
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.json());
