@@ -50,7 +50,7 @@ main{
     width: 200px;         
     height: 280px;       
     overflow: hidden;
-    border: 3px solid black;
+    border: 1px solid black;
 
     object-fit: contain;
     place-self: center;
@@ -61,7 +61,6 @@ main{
     height: 100%;
     width: 100%;
     object-fit: contain;
-   
     /* border: 1px solid black; */
     /* object-fit: contain; */
      filter: grayscale(100%); 
