@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    user-select: none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    min-height: fit-content;
+    max-width: 30rem;
+    /* border: 1px solid black; */
+}
+.header{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input{
+    height: 2.5rem;
+    width: 70%;
+    border-radius: 3px;
+    border: 0.7px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    opacity: 0.7;
+}
+.input i{
+    font-size: 1.6rem;
+}
+.mode{
+    height: 1.9rem;
+    width: 4rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.313);
+
+
+
+    border-radius: 20px;
+}
+.circle{
+    height: 1.8rem;
+    width: 2rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.607);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 40%;
+}
+.dark{
+    transform: translateX(100%);
+}
+.board{
+    height: 20rem;
+    width: 100%;
+    border: 0.7px solid black;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.boardHeading{
+    height: 15%;
+    /* border: 1px solid black; */
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.9;
+    display:flex;
+    align-items: center;
+}
+.poster{
+    height: fit-content;
+    width: 90%;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0.7;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.boardBottom{
+    display: flex;
+    height: 2rem;
+    width: 100%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    opacity: 0.6;
+}
+.boardNumber{
+    height: 2rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.number{
+    height: 0.5rem;
+    width: 0.5rem;
+    border: 0.7px solid black;
+
+    border-radius: 20px;
+}
+.active{
+    background-color: black;
+}
+.bar{
+    height: 20rem;
+    width: 100%;
+    /* border: 0.7px solid black; */
+    padding: 0.5rem;
+}
+.barHeading{
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* border: 0.7px solid black; */
+    padding-right: 0.5rem;
+
+}
+.barArrow{
+    height: 1.8rem;
+    width: 3.3rem;
+    border: 0.7px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+.itemBar{
+    height: 16rem;
+    width: 100%;
+    padding: 0.5rem;
+    /* border: 0.7px solid black; */
+    font-weight: 600;
+    display: flex;
+    overflow: auto;
+
+}
+.item{
+    height: 100%;
+    width:9rem;
+    font-size: 0.8rem;
+    border: 0.7px solid black;
+    flex-shrink: 0;
+}
+.image{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    height: 7rem;
+    width: 7rem;
+}
+.name,.price{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    padding-left: 0.4rem;
+    padding-top: 0.4rem;
+}
+.fakePrice{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.realPrice{
+    padding-left: 0.2rem;
+}
+
+.footer{
+    height:4.2rem;
+    width: 100%;
+    border-top: 0.7px solid rgba(0, 0, 0, 0.393);
+
+    position: fixed;
+    bottom: 0;
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.footerBox{
+    height: 4.2rem;
+    width: calc(100%/4);
+    /* width: 5rem; */
+    font-size: 1.6rem;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    /* border: 0.1px solid black ; */
+    
+}
+.footerName{
+    font-size: 0.8rem;
+}
+.printout{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    position:absolute;
+    bottom: 6rem;
+    right: 0.5rem;
+    /* background-color: white; */
+    background-color: white;
+    opacity: 1;
+}
+.fakeFooter{
+    height:4.2rem;
+}
